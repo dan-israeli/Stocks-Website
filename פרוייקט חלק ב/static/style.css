@@ -1,0 +1,32 @@
+body
+{
+    background-color:peachpuff;
+}
+
+h1
+{
+    color: black;
+}
+
+h2
+{
+    color: black;
+}
+
+h3
+{
+    color: black;
+}
+img
+{
+    vertical-align:middle;
+    width: 800x;
+    height: 500px;
+}
+table, th, td
+{
+    border: 1px solid black;
+    background: white;
+
+
+}
