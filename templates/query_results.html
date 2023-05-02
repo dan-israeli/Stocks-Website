@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Query Results</title>
+</head>
+
+<body>
+
+<h2>Query 1:</h2>
+<table>
+    <th>Name</th>
+    <th>Total sum</th>
+    {% for content in sql_res1%}
+        <tr>
+            <td>{{content.Name}}</td>
+            <td>{{content.Total_Sum}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<h2>Query 2:</h2>
+<table>
+    <th>Symbol</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    {% for content in sql_res2%}
+        <tr>
+            <td>{{content.Symbol}}</td>
+            <td>{{content.Name}}</td>
+            <td>{{content.quantity}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<h2>Query 3:</h2>
+<table>
+    <th>Date</th>
+    <th>Symbol</th>
+    <th>Name</th>
+    {% for content in sql_res3%}
+        <tr>
+            <td>{{content.buy_date}}</td>
+            <td>{{content.Symbol}}</td>
+            <td>{{content.Name}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="home.html">Home</a>
+<br>
+<a href="add_transaction.html">Add Transaction</a>
+<br>
+<a href="query_results.html">Query Result</a>
+<br>
+<a href="buy_stocks.html">Buy Stocks</a>
+</body>
+</html>
